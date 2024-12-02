@@ -1,0 +1,24 @@
+# Site settings
+title: BMC Research Informatics Code Library
+email: cdw@bmc.org
+description: Start here.
+baseurl: "/code-library"
+repository: "https://research-informatics.github.io/code-library/"
+permalinks: pretty
+defaults:
+  -
+    scope:
+      path: "" # Apply to all files
+    values:
+      layout: "default"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Add your custom CSS
+include:
+  - assets/css/main.css  # Add your CSS file path here
+
+sass:
+  style: compressed
