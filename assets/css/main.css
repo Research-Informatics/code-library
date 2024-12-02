@@ -1,0 +1,391 @@
+/* General CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+     font-family: "Lato", Helvetica, Arial, sans-serif;
+color: #212529; /* Dark gray text */
+    background-color: #F8F8F8; /* White background */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00867B; /* Primary color from your theme */
+	font-weight: bold;
+}
+
+h2 {
+ font-size: 1.75em; /* 24px */
+    line-height: 1.5; /* Adjust for readability */
+    color: #00556F; /* Dark blue color from your theme */
+	font-weight: bold;
+}
+
+h3 {
+ font-size: 1.33em; /* 24px */
+    line-height: 1.5; /* Adjust for readability */
+    color: #00556F; /* Dark blue color from your theme */
+	font-weight: bold;
+}
+
+img {
+    max-width: 90%;
+}
+
+/* Custom CSS for home page */
+.hero-spacer {
+    margin-top: 50px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;
+}
+
+.blog-content-wrap {
+    margin-top: 20px;
+    padding-top: 40px;
+}
+
+/* Custom CSS for the docs */
+
+.edit-links {
+    color: #cccccc;
+}
+
+/* Prevent in-page links from scrolling under top nav */
+h2::before, h3::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+}
+
+/* Custom CSS for header and footer */
+.site-header
+{
+    width: 100%;
+    padding: 24px 0px;
+}
+
+img.logo
+{
+    height: 28px;
+    margin-left: -18px;
+}
+
+.icon > svg
+{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.icon > svg path
+{
+    fill: #333333;
+}
+
+
+.thumb-home {
+    height: 340px;
+}
+
+.img-home {
+    height: 150px !important;
+    margin: 10px;
+}
+
+.tableauIcon {
+    margin-left: 18px;
+}
+
+.jumbotron {
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+}
+
+#community-jumbo {
+    background-color: #F0F8FF;
+}
+
+footer {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.footer-hr {
+    width: 100%;
+    position: relative;
+}
+
+table {
+    border: 1px solid #c2c2c2;
+    border-collapse: collapse;
+    margin: 1em 0px;
+}
+
+th
+{
+    font-weight: bold;
+    border: 1px solid #c2c2c2;
+    text-align: left;
+    padding: .3em;
+    vertical-align: top;
+    background-color: #fafafa;
+}
+
+td
+{
+    border: 1px solid #c2c2c2;
+    text-align: left;
+    padding: .3em;
+    vertical-align: top;
+}
+
+/* So the scroll bar width doesn't cause the page to jump */
+html {
+    overflow-y: scroll;
+}
+
+.label {
+    margin-right: 3px;
+}
+
+/* to get right navbar icons to respect collapse */
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+.navbar {
+    background-color: #00867B; /* Primary color */
+    color: #ffffff; /* Optional: Set text to white for contrast */
+}
+
+.navbar-brand {
+    color: #F8F8F8 !important; /* Primary color */
+    font-weight: bold; /* Optional: Make the font bold */
+    text-decoration: none; /* Optional: Remove underline if present */
+}
+
+/* Custom css for news section */
+.blog-content {
+    margin-bottom: 70px;
+}
+
+.blogul {
+    padding: 0px;
+}
+
+.blogul h1 {
+    margin-top: 40px;
+}
+
+.blog-content > h4 {
+    margin-top: 20px;
+}
+
+.blog-content > ol {
+    margin-bottom: 20px;
+}
+
+
+/* Community connectors */
+.thumbnail {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 12px;
+}
+
+.thumbnail h2 {
+    border-left: 2px solid #337ab7;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px;
+    margin-left: 10px;
+}
+
+.thumbnail h2 a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.well {
+    background-color: #ffffff;
+    margin-bottom: 40px;
+}
+/* Hide submenus by default */
+.submenu {
+    display: block; /* Initially hide all submenus */
+    padding-left: 15px; /* Indent submenus */
+}
+
+/* Show submenu when active */
+.submenu.active {
+    display: block; /* Show submenu */
+}
+
+/* Add a hover effect for toggle links */
+.toggle-menu {
+    cursor: pointer;
+    color: #00556F; /* Default link color */
+    text-decoration: none;
+}
+
+.toggle-menu:hover {
+    color: #00867B; /* Hover color */
+    text-decoration: underline;
+}
+
+/* Default arrow styling */
+.toggle-menu .toggle-arrow {
+    font-size: 12px; /* Adjust size as needed */
+    margin-left: 8px; /* Space between text and arrow */
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate arrow when submenu is active */
+.toggle-menu .toggle-arrow.expanded {
+    transform: rotate(90deg); /* Rotate to point down */
+}
+
+
+/* Specific styling for docs-menu */
+.well.docs-menu {
+    background-color: #FFFFFF; /* White background for menu */
+    border: 1px solid #00867B; /* Green border for emphasis */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 20px; /* Add consistent spacing */
+    color: #000000; /* Black text */
+}
+
+
+/* Styling for the main navigation list */
+.nav-list {
+    list-style-type: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+/* Style for top-level menu links */
+.nav-list > li > a {
+    color: #00556F; /* Default link color */
+    text-decoration: none; /* No underline */
+    padding: 8px 10px; /* Adds spacing inside each item */
+    display: block; /* Make the whole row clickable */
+    border-radius: 5px; /* Optional rounded corners for better UX */
+}
+
+
+/* Hover effect for menu items */
+.nav-list > li > a:hover {
+    background-color: #EAE6F8; /* Light purple */
+    color: #553178; /* Dark purple */
+}
+
+/* Submenu styling */
+.nav-list ul {
+    list-style-type: none; /* Remove bullets from submenus */
+    padding-left: 20px; /* Indent submenu items */
+    margin: 0;
+}
+
+.nav-list ul li a {
+    font-size: 14px; /* Smaller font for submenu links */
+    color: #00556F; /* Default dark teal for submenu links */
+}
+
+.nav-list ul li a:hover {
+    color: #553178; /* Dark purple for hover */
+    background-color: #EAE6F8; /* Light purple background */
+}
+
+
+.tsd-navigation {
+    padding: 10px !important;
+}
+
+/* Media queries for responsive design */
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+
+.column { float: left; }
+.size-1of3 { width: 33.333%; }
+
+
+@media screen and (max-width: 767px) {
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+
+    /* Docs Menu*/
+    .docs-menu, .tsd-navigation {
+        top: 20px;
+        position: relative;
+    }
+
+}
+@media screen and (min-width: 769px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+
+    /* Docs Menu*/
+    .docs-menu, .tsd-navigation {
+        position: fixed;
+        overflow: auto;
+        top: 90px;
+        max-height: 90%;
+        max-width: 250px;
+    }
+
+    .content {
+        position: relative;
+        margin: 40px 0px 0px 275px;
+        max-width: 1000px;
+    }
+
+    /* API Reference */
+
+    .ref-content {
+        margin: 40px 0px 0px 275px;
+        max-width: 1000px;
+    }
+}
+
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
