@@ -9,42 +9,20 @@ layout: default
 Use this to get basic demographics for a known cohort for extraction. Requires cohort joined on patientepicid.
 
 _birthdate, deathdate, zip, etc not included as they are hipaa_ 
+<br>**Sex note:** default to sexassignedatbirth, if others are requested include "sex as legalsex, genderidentity"
+<br>**Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
+<br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
-**Sex note:** default to sexassignedatbirth, if others are requested include "sex as legalsex, genderidentity"
-**Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
-**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
-
-```html
-<div>
-    <button onclick="copyToClipboard('example-code')">Copy</button>
-</div>
-<pre id="example-code" style="border:1px solid #ddd;padding:10px;background:#f9f9f9;">
-# This is an example Python query
-
-SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
---,/*vitalstatus,*/ interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus
-FROM cdwr.[user].[cohort] coh --adjust for cohort of interest
+```sql
+SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
+pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
+FROM cdwr.[user].[cohort] coh
 INNER JOIN cdwr.dbo.patient_v pat
-	ON pat.patientepicid = coh.patientepicid
-ORDER BY coh.id
-
-</pre>
-
-<script>
-function copyToClipboard(elementId) {
-    const code = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(code).then(function() {
-        alert('Code copied to clipboard!');
-    }, function() {
-        alert('Failed to copy code.');
-    });
-}
-</script>
-
+    ON pat.patientepicid = coh.patientepicid
+ORDER BY coh.id;
 
 
 ```
-
 ### CDWR.dbo.patient_v
 
 Below are the fields available in cdwr.dbo.patient_v. 
