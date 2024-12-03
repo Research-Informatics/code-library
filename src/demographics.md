@@ -2,8 +2,6 @@
 title: Patient Demographics
 layout: default
 ---
-<script src="/assets/copyscript.js"></script>
-
 
 ## Demographic Snips
 
@@ -16,6 +14,7 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 <br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
 ```html
+<script src="assets/copyscript.js"></script>
 <pre>
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
 pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
