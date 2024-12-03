@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.top = "5px";
         button.style.right = "5px";
         button.style.padding = "5px 10px";
-        button.style.background = "#007bff";
-        button.style.color = "#fff";
+button.style.background = "#E97300"; // Accent orange
+button.style.color = "#fff"; // White text
         button.style.border = "none";
         button.style.cursor = "pointer";
         button.style.borderRadius = "4px";
