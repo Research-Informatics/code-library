@@ -26,6 +26,16 @@ ORDER BY coh.id;
 </pre>
 
 ```
+{% include codeHeader.html %}
+```sql
+SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
+pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
+FROM cdwr.[user].[cohort] coh
+INNER JOIN cdwr.dbo.patient_v pat
+    ON pat.patientepicid = coh.patientepicid
+ORDER BY coh.id;
+```
+
 ### CDWR.dbo.patient_v
 
 Below are the fields available in cdwr.dbo.patient_v. 
