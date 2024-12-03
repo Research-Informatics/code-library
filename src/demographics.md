@@ -12,7 +12,12 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 **Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
 **Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
-```python
+```html
+<div>
+    <button onclick="copyToClipboard('example-code')">Copy</button>
+</div>
+<pre id="example-code" style="border:1px solid #ddd;padding:10px;background:#f9f9f9;">
+# This is an example Python query
 
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
 --,/*vitalstatus,*/ interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus
@@ -20,6 +25,21 @@ FROM cdwr.[user].[cohort] coh --adjust for cohort of interest
 INNER JOIN cdwr.dbo.patient_v pat
 	ON pat.patientepicid = coh.patientepicid
 ORDER BY coh.id
+
+</pre>
+
+<script>
+function copyToClipboard(elementId) {
+    const code = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(code).then(function() {
+        alert('Code copied to clipboard!');
+    }, function() {
+        alert('Failed to copy code.');
+    });
+}
+</script>
+
+
 
 ```
 
