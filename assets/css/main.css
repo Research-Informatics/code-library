@@ -200,13 +200,29 @@ html {
 }
 
 /* hide the pre section */
+/* Override styles for <pre> */
 pre {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    font-family: Consolas, Monaco, "Courier New", monospace; /* Adjust as needed */
-    font-size: 0.9rem; /* Adjust font size if needed */
+    border: none !important;
+    background-color: transparent !important; /* Remove background from <pre> */
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: Consolas, Monaco, "Courier New", monospace !important; /* Set your preferred font */
+    font-size: 0.9rem !important; /* Adjust font size */
+    white-space: pre-wrap !important; /* Ensure proper preformatting */
+}
+
+/* Override styles for <code> */
+code {
+    color: inherit !important;
+    background-color: transparent !important; /* Remove background from <code> */
+    font-family: Consolas, Monaco, "Courier New", monospace !important; /* Match the <pre> font */
+    font-size: 0.9rem !important;
+}
+
+/* Ensure highlight styles don't apply unnecessary padding/margin */
+.highlight table pre {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Custom css for news section */
