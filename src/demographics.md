@@ -2,6 +2,7 @@
 title: Patient Demographics
 layout: default
 ---
+<script src="copyscript.js"></script>
 
 ## Demographic Snips
 
@@ -13,14 +14,15 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 <br>**Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
 <br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
-```sql
+```html
+<pre>
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
 pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
 FROM cdwr.[user].[cohort] coh
 INNER JOIN cdwr.dbo.patient_v pat
     ON pat.patientepicid = coh.patientepicid
 ORDER BY coh.id;
-
+</pre>
 
 ```
 ### CDWR.dbo.patient_v
