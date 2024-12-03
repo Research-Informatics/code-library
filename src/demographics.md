@@ -15,26 +15,18 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 
 
 ```html
-
 <pre>
-SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
-pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
-FROM cdwr.[user].[cohort] coh
-INNER JOIN cdwr.dbo.patient_v pat
-    ON pat.patientepicid = coh.patientepicid
-ORDER BY coh.id;
-</pre>
 
-```
-{% include codeHeader.html %}
-```sql
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
 pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
 FROM cdwr.[user].[cohort] coh
 INNER JOIN cdwr.dbo.patient_v pat
     ON pat.patientepicid = coh.patientepicid
 ORDER BY coh.id;
+
+</pre>
 ```
+
 
 ### CDWR.dbo.patient_v
 
