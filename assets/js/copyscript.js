@@ -1,25 +1,45 @@
-// This assumes that you're using Rouge; if not, update the selector
-const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
-const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+document.addEventListener("DOMContentLoaded", function () {
+    const preBlocks = document.querySelectorAll("pre");
 
-copyCodeButtons.forEach((copyCodeButton, index) => {
-  const code = codeBlocks[index].innerText;
+    preBlocks.forEach((block) => {
+        // Create the copy button
+        const button = document.createElement("button");
+        button.innerText = "Copy";
+        button.style.position = "absolute";
+        button.style.top = "5px";
+        button.style.right = "5px";
+        button.style.padding = "5px 10px";
+        button.style.background = "#007bff";
+        button.style.color = "#fff";
+        button.style.border = "none";
+        button.style.cursor = "pointer";
+        button.style.borderRadius = "4px";
 
-  copyCodeButton.addEventListener('click', () => {
-    // Copy the code to the user's clipboard
-    window.navigator.clipboard.writeText(code);
+        // Wrap the code block in a relative container
+        const wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+        wrapper.style.display = "inline-block";
+        wrapper.style.marginBottom = "20px";
 
-    // Update the button text visually
-    const { innerText: originalText } = copyCodeButton;
-    copyCodeButton.innerText = 'Copied!';
+        wrapper.appendChild(block.cloneNode(true));
+        wrapper.appendChild(button);
 
-    // (Optional) Toggle a class for styling the button
-    copyCodeButton.classList.add('copied');
+        // Replace the original <pre> block with the wrapper
+        block.parentNode.replaceChild(wrapper, block);
 
-    // After 2 seconds, reset the button to its initial UI
-    setTimeout(() => {
-      copyCodeButton.innerText = originalText;
-      copyCodeButton.classList.remove('copied');
-    }, 2000);
-  });
+        // Add the click event for the copy button
+        button.addEventListener("click", function () {
+            const text = block.innerText;
+            navigator.clipboard.writeText(text).then(
+                () => {
+                    button.innerText = "Copied!";
+                    setTimeout(() => (button.innerText = "Copy"), 2000);
+                },
+                () => {
+                    button.innerText = "Failed!";
+                    setTimeout(() => (button.innerText = "Copy"), 2000);
+                }
+            );
+        });
+    });
 });
