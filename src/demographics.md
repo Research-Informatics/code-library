@@ -2,7 +2,8 @@
 title: Patient Demographics
 layout: default
 ---
-<script src="copyscript.js"></script>
+<script src="/assets/copyscript.js"></script>
+
 
 ## Demographic Snips
 
