@@ -1,3 +1,6 @@
+console.log("Copy script loaded and running!");
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const preBlocks = document.querySelectorAll("pre");
 
