@@ -1,6 +1,3 @@
-console.log("Copy script loaded and running!");
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const preBlocks = document.querySelectorAll("pre");
 
@@ -32,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add the click event for the copy button
         button.addEventListener("click", function () {
-            const text = block.innerText;
+            // Copy only the text content of the <pre> block
+            const text = block.textContent.trim(); // Ensure clean text
             navigator.clipboard.writeText(text).then(
                 () => {
                     button.innerText = "Copied!";
