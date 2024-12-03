@@ -13,7 +13,7 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 <br>**Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
 <br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
-<script src="assets/js/copyscript.js"></script>
+
 ```html
 
 <pre>
