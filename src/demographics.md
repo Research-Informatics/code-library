@@ -3,11 +3,13 @@ title: Patient Demographics
 layout: default
 ---
 
-## Demograhpic Snips
+## Demographic Snips
 
 ### .demo
 Use this to get basic demographics for a known cohort for extraction. Requires cohort joined on patientepicid.
-_birthdate, deathdate, zip, etc not included as they are hipaa_
+
+_birthdate, deathdate, zip, etc not included as they are hipaa_ 
+
 **Sex note:** default to sexassignedatbirth, if others are requested include "sex as legalsex, genderidentity"
 **Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
 **Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
