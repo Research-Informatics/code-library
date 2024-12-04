@@ -25,6 +25,23 @@ ORDER BY coh.id;
 
 ```
 
+#### .demorecruit
+Use this snip to get demographics when providing the data for recruitment purposes. 
+```sql
+SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
+, pat.interpreterneeded, mychartstatus, sex as legalsex, genderidentity,pro.pronoun --recruitment specific variables
+--researchcontactpreference --unsure what this is / reliability is suspect etc
+FROM cdwr.user.cohort coh --adjust for cohort of interest
+INNER JOIN cdwr.dbo.patient_v pat
+--	ON pat.mrn = coh.mrn
+--LEFT OUTER JOIN patientpronouns_v pro
+--	ON pro.
+WHERE pat.vitalstatus = 'Alive' --maybe unnecessary, patients should already be noted as alive prior
+ORDER BY coh.id
+
+```
+
+
 
 ### CDWR.dbo.patient_v
 
