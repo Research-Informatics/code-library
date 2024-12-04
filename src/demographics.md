@@ -14,7 +14,7 @@ _birthdate, deathdate, zip, etc not included as they are hipaa_
 <br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
 
 
-```html
+```sql
 
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
 pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
