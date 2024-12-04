@@ -288,7 +288,25 @@ html {
     transform: rotate(90deg); /* Rotate to point down */
 }
 
+/* copy button styling */
+button.copy-button {
+    position: absolute; /* Anchors the button relative to <pre> */
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: #EBAB21; /* Theme yellow */
+    color: #fff; /* White font */
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 1; /* Ensures the button stays above the text */
+}
 
+button.copy-button:hover {
+    background-color: #FFD75C; /* Lighter yellow on hover */
+    color: #553178; /* Darker font (purple theme color) */
+}
 /* Specific styling for docs-menu */
 .well.docs-menu {
     background-color: #FFFFFF; /* White background for menu */
