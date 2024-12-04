@@ -9,15 +9,25 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.top = "5px";
         button.style.right = "5px";
         button.style.padding = "5px 10px";
-button.style.background = "#E97300"; // Accent orange
-button.style.color = "#fff"; // White text
+        button.style.backgroundColor = "#EBAB21"; /* Theme yellow */
+        button.style.color = "#fff"; /* White font */
         button.style.border = "none";
         button.style.cursor = "pointer";
         button.style.borderRadius = "4px";
 
+        // Add hover effect using event listeners
+        button.addEventListener("mouseover", function () {
+            button.style.backgroundColor = "#FFD75C"; /* Lighter yellow on hover */
+            button.style.color = "#553178"; /* Darker font (purple theme color) */
+        });
+        button.addEventListener("mouseout", function () {
+            button.style.backgroundColor = "#EBAB21"; /* Original yellow */
+            button.style.color = "#fff"; /* Original white font */
+        });
+
         // Wrap the code block in a relative container
         const wrapper = document.createElement("div");
-        wrapper.style.position = "relative";
+        wrapper.style.position = "relative"; // Ensure the button is positioned relative to this block
         wrapper.style.display = "inline-block";
         wrapper.style.marginBottom = "20px";
 
