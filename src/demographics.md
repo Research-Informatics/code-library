@@ -83,11 +83,3 @@ Below are the fields available in cdwr.dbo.patient_v.
 | MotherPatientKey                | bigint      | Link to the patient record of the mother.          | Key for family relationship data.           |
 | ResearchContactPreference       | nvarchar    | Indicates research contact preferences.            | Ensure compliance with opt-in policies.     |
 | MyChartStatus                   | nvarchar    | Status of the patient's MyChart account.           | Track portal access activity.               |
-
-
-```python
-# This is a Python example
-def greet(name):
-    print(f"Hello, {name}!")
-
-greet("World")
