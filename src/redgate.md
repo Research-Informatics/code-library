@@ -13,4 +13,4 @@ Analysts are expected to leverage the snips available to them as outlined in thi
 
 _Suggestions_
 The default setting may be too responsive and overwrite your code; consider adding a delay and altering the key for insert. 
-![Suggestions screenshot](/img/sqlprompt.png)
+![Suggestions screenshot]({{ site.baseurl }}/img/sqlprompt.png)
