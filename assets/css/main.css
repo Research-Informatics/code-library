@@ -199,25 +199,7 @@ html {
     text-decoration: none; /* Optional: Remove underline if present */
 }
 
-/* hide the pre section */
-/* Override styles for <pre> */
-pre {
-    border: none !important;
-    background-color: transparent !important; /* Remove background from <pre> */
-    padding: 0 !important;
-    margin: 0 !important;
-    font-family: Consolas, Monaco, "Courier New", monospace !important; /* Set your preferred font */
-    font-size: 0.9rem !important; /* Adjust font size */
-    white-space: pre-wrap !important; /* Ensure proper preformatting */
-}
 
-/* Override styles for <code> */
-code {
-    color: inherit !important;
-    background-color: transparent !important; /* Remove background from <code> */
-    font-family: Consolas, Monaco, "Courier New", monospace !important; /* Match the <pre> font */
-    font-size: 0.9rem !important;
-}
 
 /* Ensure highlight styles don't apply unnecessary padding/margin */
 .highlight table pre {
