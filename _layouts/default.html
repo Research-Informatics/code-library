@@ -32,6 +32,13 @@ layout: docs
         <!-- Link to the JavaScript file -->
     <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("pre code").forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    });
+</script>
 
 </body>
 
