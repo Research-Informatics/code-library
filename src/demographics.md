@@ -5,15 +5,9 @@ layout: default
 
 ## Demographic Snips
 
+
 ### .demo
 Use this to get basic demographics for a known cohort for extraction. Requires cohort joined on patientepicid.
-
-_birthdate, deathdate, zip, etc not included as they are hipaa_ 
-<br>**Sex note:** default to sexassignedatbirth, if others are requested include "sex as legalsex, genderidentity"
-<br>**Race note:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
-<br>**Other demographics fields:** "vitalstatus, interpreterneeded, firstrace, secondrace, countryoforigin, highestlevelofeducation, mychartstatus, maritalstatus"
-
-
 <pre><code class="sql">
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
 pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
@@ -25,7 +19,8 @@ ORDER BY coh.id;
 
 #### .demorecruit
 Use this snip to get demographics when providing the data for recruitment purposes. 
-```sql
+
+<pre><code class="sql">
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, pat.firstrace, pat.cdwrrace AS cdwrrace, ethnicity AS hispanicindicator 
 , pat.interpreterneeded, mychartstatus, sex as legalsex, genderidentity,pro.pronoun --recruitment specific variables
 --researchcontactpreference --unsure what this is / reliability is suspect etc
@@ -36,13 +31,13 @@ INNER JOIN cdwr.dbo.patient_v pat
 --	ON pro.
 WHERE pat.vitalstatus = 'Alive' --maybe unnecessary, patients should already be noted as alive prior
 ORDER BY coh.id
-
-```
-
-
+</code></pre>
 
 ### CDWR.dbo.patient_v
-
+#### Notes on demographic data elements
+birthdate, deathdate, zip, etc not considered patient demographics as they are HIPAA identifiers
+<br>**Sex:** default to sexassignedatbirth, if others are requested include "sex as legalsex, genderidentity"
+<br>**Race:** default to cdwrrace as race "firstrace" means nothing as is confusing, suggests something we cannot assume.
 Below are the fields available in cdwr.dbo.patient_v. 
 
 | Data Field                      | Data Type   | Brief Description                                      | Important Reminders                          |
