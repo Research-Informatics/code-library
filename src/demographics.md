@@ -42,7 +42,7 @@ Below are the fields available in cdwr.dbo.patient_v.
 
 | Data Field                      | Data Type   | Brief Description                                      | Important Reminders                          |
 |---------------------------------|-------------|-------------------------------------------------------|---------------------------------------------|
-| PatientKey                      | bigint      | Unique identifier for the patient.                   | Primary key, used for linking records.      |
+| PatientKey                      | bigint      | Unique identifier for the patient. Can be used to join on PatientDurableKey                 | Primary key, used for linking records.      |
 | MRN                             | nvarchar    | Medical Record Number.                               | Ensure uniqueness within the system.        |
 | PatientEpicId                   | nvarchar    | Epic system identifier for the patient.              | Used for system integration.                |
 | FirstName                       | nvarchar    | Patient's first name.                                | Ensure consistent formatting.               |
