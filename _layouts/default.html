@@ -32,13 +32,17 @@ layout: docs
         <!-- Link to the JavaScript file -->
     <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("pre code").forEach((block) => {
-            hljs.highlightElement(block);
+
+    <!-- Add Highlight.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>
+        // Initialize Highlight.js
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("pre code").forEach((block) => {
+                hljs.highlightElement(block);
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 
