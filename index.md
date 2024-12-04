@@ -1,26 +1,36 @@
 ---
-title: BMC Research Data & Informatics Code Library
+title: BMC Research Data & Informatics Analyst Guide
 layout: default
 ---
-A well-structured code library is an essential tool for a research data team, serving as a centralized repository for reusable code, scripts, and tools that streamline workflows and improve efficiency. In research, where the complexity of data and the need for rapid, reproducible analyses are ever-increasing, a shared code library provides the foundation for collaboration, consistency, and scalability.
+# **Research Data Analyst Resource Guide**
 
-## Key Benefits
-
-### **1. Standardization and Reproducibility**
-- Researchers and analysts can rely on standardized functions and scripts, reducing errors and ensuring consistency across projects.
-- Shared code promotes reproducibility, enabling others to validate and extend findings.
-
-### **2. Efficiency and Productivity**
-- By reusing pre-built functions, teams save time that would otherwise be spent rewriting common routines or solving solved problems.
-- A library fosters faster prototyping and deployment of analyses, allowing the team to focus on innovation.
-
-### **3. Collaboration and Knowledge Sharing**
-- A centralized repository encourages collaboration by making resources easily accessible to all team members.
-- Documented code ensures that institutional knowledge is preserved and not tied to individual contributors.
-
-### **4. Scalability and Adaptability**
-- As the team grows or projects diversify, a code library ensures a scalable foundation that can be adapted to new needs and challenges.
+Welcome to the **Research Data Analyst Resource Guide**, your go-to repository for technical insights, practical solutions, and standardized best practices in research data analytics. This guide has been meticulously crafted to empower analysts like you—professionals who are entrenched in the technical intricacies of data manipulation, querying, and analysis—with resources designed to streamline your work and elevate your expertise.
 
 ---
 
-For a research data team, where the integrity and utility of data underpin critical decision-making, a code library not only accelerates daily operations but also enhances the overall quality of insights and research outcomes.
+## **What’s Inside the Guide?**
+
+### **1. Code Library**
+- A curated collection of code snippets designed to tackle common challenges in research data workflows.
+- Examples and templates for SQL, Python, R, and other frequently used programming languages in research analytics.
+- Customizable functions and blocks for automation, data transformation, and visualization.
+
+### **2. Tips, Tricks, and FYIs**
+- Practical insights into optimizing your code for performance and maintainability.
+- Workarounds for complex data issues, including handling missing data, managing joins, and scaling large datasets.
+- Guidance on leveraging advanced tools and libraries to maximize efficiency.
+
+### **3. Best Practices and Standards**
+- Guidelines for writing clean, reusable, and robust code.
+- Standards for naming conventions, documentation, and version control to maintain consistency across projects.
+- Recommendations for efficient collaboration, ensuring seamless integration of work within larger research teams.
+
+---
+
+## **Why This Guide Matters**
+In the ever-evolving field of research data analytics, staying efficient, consistent, and up-to-date is critical. This resource guide bridges the gap between technical complexity and practical application, helping you:
+- Save time with ready-to-use code and prebuilt solutions.
+- Gain deeper insights through actionable tips and strategies.
+- Ensure your work adheres to established standards for quality and reproducibility.
+
+Whether you’re querying massive clinical datasets, refining predictive models, or automating tedious workflows, this guide is here to support your success. Dive in, explore the tools and knowledge within, and let’s push the boundaries of research data analytics together.
