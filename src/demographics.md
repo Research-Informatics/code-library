@@ -17,7 +17,7 @@ INNER JOIN cdwr.dbo.patient_v pat
 ORDER BY coh.id;
 </code></pre>
 
-#### .demorecruit
+### .demorecruit
 Use this snip to get demographics when providing the data for recruitment purposes. 
 
 <pre><code class="sql">
