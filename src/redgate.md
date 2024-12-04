@@ -12,5 +12,5 @@ Analysts are expected to leverage the snips available to them as outlined in thi
 ### Leveraging Redgate Effectively
 
 _Suggestions_
-The default setting may be too responsive and overwrite your code; consider adding a delay and altering the key for insert. 
+<br>The default setting may be too responsive and overwrite your code; consider adding a delay and altering the key for insert. 
 ![Suggestions screenshot]({{ site.baseurl }}/img/sqlprompt.png)
