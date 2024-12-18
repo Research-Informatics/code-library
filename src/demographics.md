@@ -7,7 +7,7 @@ layout: default
 
 
 ### .demo
-<!-- Tags: .demo -->
+<!-- Tags: .demo, demographics -->
 **Tags**: demographics, cohort, SQL, patient data
 Use this to get basic demographics for a known cohort for extraction. Requires cohort joined on patientepicid.
 <pre><code class="sql">
