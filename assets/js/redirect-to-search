@@ -1,2 +1,14 @@
-// Redirect to the search page
-window.location.href = "/search.html";
+[
+  {
+    "title": ".demo",
+    "url": "/path/to/demo",
+    "content": "Use this to get basic demographics for a known cohort.",
+    "tags": ["demographics", "SQL", "cohort"]
+  },
+  {
+    "title": ".revenue",
+    "url": "/path/to/revenue",
+    "content": "Calculates monthly revenue growth for the company.",
+    "tags": ["finance", "revenue", "growth"]
+  }
+]
