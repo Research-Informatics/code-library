@@ -7,6 +7,8 @@ layout: default
 
 
 ### .demo
+<!-- Tags: .demo -->
+**Tags**: demographics, cohort, SQL, patient data
 Use this to get basic demographics for a known cohort for extraction. Requires cohort joined on patientepicid.
 <pre><code class="sql">
 SELECT DISTINCT coh.id, ageinyears, pat.sexassignedatbirth, pat.preferredlanguage, 
