@@ -4,7 +4,6 @@ layout: default
 ---
 
 ## Encounter Types
-testing
 
 For cohort derivation and data extraction, it is important to consider the encounter types you are using in your queries. Often, the research question requires our team to specify encounters of interest, even in the case of "all utilization".
 
@@ -21,8 +20,8 @@ Below are the fields in encounter_v.
 
 | Data Field                    | Data Type   | Brief Description                                                 | Important Reminders                                           |
 |------------------------------|-------------|------------------------------------------------------------------|--------------------------------------------------------------|
-| EncounterKey                 | bigint      | Unique identifier for the encounter.                              | Primary key. Use to join with related encounter-level tables. |
-| EncounterEpicCsn            | nvarchar    | Epic Contact Serial Number.                                       | May be used for auditing or Epic log references.              |
+| EncounterKey                 | bigint      | Unique identifier for the encounter.                              | Caboodle primary key. Should only need to use this for joining within Caboodle schema. |
+| EncounterEpicCsn            | nvarchar    | Epic Contact Serial Number.                                       | CDWR has been engineered so you may utilizez this to join throughout the CDWR schema and into Clarity.              |
 | PatientEpicId               | nvarchar    | Epic identifier for the patient.                                  | Link back to patient_v or related patient tables.             |
 | MRN                         | nvarchar    | Medical Record Number.                                            | Ensure consistency with patient_v.                            |
 | HospitalAccountId           | nvarchar    | Billing account ID associated with the encounter.                 | May not exist for all encounters (e.g., outpatient).          |
