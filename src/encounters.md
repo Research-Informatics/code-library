@@ -4,6 +4,7 @@ layout: default
 ---
 
 ## Encounter Types
+testing
 
 For cohort derivation and data extraction, it is important to consider the encounter types you are using in your queries. Often, the research question requires our team to specify encounters of interest, even in the case of "all utilization".
 
