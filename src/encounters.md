@@ -14,22 +14,23 @@ This view is designed to bifurcate encounters to isolate services that support c
 
 ### **dbo.Encounter_V**
 This is the primary view for encounters and should be used in most cases. 
+The CDWR team has created several derived variables to faciliate research inquiry and querying. Analysts should be familiar with these derived variables and know when to include them in queries and extracts. These derived variables are outlined here, with the complete encounter_v dictionary below.
 
 Below are the fields in encounter_v.
 
 
-| Data Field                    | Data Type   | Brief Description                                                 | Important Reminders                                           |
-|------------------------------|-------------|------------------------------------------------------------------|--------------------------------------------------------------|
-| EncounterKey                 | bigint      | Unique identifier for the encounter.                              | Caboodle primary key. Should only need to use this for joining within Caboodle schema. |
-| EncounterEpicCsn            | nvarchar    | Epic Contact Serial Number.                                       | CDWR has been engineered so you may utilizez this to join throughout the CDWR schema and into Clarity.              |
-| PatientEpicId               | nvarchar    | Epic identifier for the patient.                                  | Link back to patient_v or related patient tables.             |
-| MRN                         | nvarchar    | Medical Record Number.                                            | Ensure consistency with patient_v.                            |
-| HospitalAccountId           | nvarchar    | Billing account ID associated with the encounter.                 | May not exist for all encounters (e.g., outpatient).          |
-| PatientClassEpicId          | nvarchar    | Epic identifier for patient class.                                | Links to Epic patient class configuration.                    |
-| PatientClass                | nvarchar    | Describes the class of the patient (e.g., Inpatient, Outpatient). | Used to differentiate care setting.                           |
-| EncounterTypeEpicId         | nvarchar    | Epic ID for the type of encounter.                                | Can be used to group or filter encounters.                    |
-| EncounterType               | nvarchar    | Text description of the encounter type.                           | Review to identify ancillary vs primary care types.           |
-| ServiceDate                 | datetime    | Date services were rendered.                                      | Used for temporal filtering and reporting.                    |
+| Data Field                    | Data Type   |Source | Brief Description                                                 | Important Reminders                                           |
+|------------------------------|-------------|-------------|------------------------------------------------------------------|--------------------------------------------------------------|
+| EncounterKey                 | bigint      | Caboodle| Unique identifier for the encounter.                              | Caboodle primary key. Should only need to use this for joining within Caboodle schema. |
+| EncounterEpicCsn            | nvarchar    | Clarity |  Epic Contact Serial Number.                                       | CDWR has been engineered so you may utilizez this to join throughout the CDWR schema and into Clarity.              |
+| PatientEpicId               | nvarchar    | Clarity | Epic identifier for the patient.                                  | Link back to patient_v or related patient tables.             |
+| MRN                         | nvarchar    | Clarity | Medical Record Number.                                            | Only necessary for chart reviews and analysts record viewing. Provisioning MRN subject to IRB determination.                          |
+| HospitalAccountId           | nvarchar    | Clarity | Billing account ID associated with the encounter.                 | May not exist for all encounters (e.g., outpatient).          |
+| PatientClassEpicId          | nvarchar    | Clarity | Epic identifier for patient class.                                | Links to Epic patient class configuration.                    |
+| PatientClass                | nvarchar    | Clarity | Describes the class of the patient (e.g., Inpatient, Outpatient). | Used to differentiate care setting.                           |
+| EncounterTypeEpicId         | nvarchar    | Clarity | Epic ID for the type of encounter.                                | Can be used to group or filter encounters.                    |
+| EncounterType               | nvarchar    | Clarity | Text description of the encounter type.                           | Review to identify ancillary vs primary care types.           |
+| ServiceDate                 | datetime    | Date serv ices were rendered.                                      | Used for temporal filtering and reporting.                    |
 | AdmissionDate               | datetime    | Date the patient was admitted.                                    | Typically null for non-admission encounters.                  |
 | DischargeDate               | datetime    | Date the patient was discharged.                                  | Typically null for non-admission encounters.                  |
 | PlaceOfService              | nvarchar    | Location where the service was provided.                          | Important for billing and encounter classification.           |
