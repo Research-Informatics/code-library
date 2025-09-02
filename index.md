@@ -2,7 +2,7 @@
 title: BMC Research Data & Informatics Analyst Guide
 layout: default
 status: Ready for pw's review
-completed_by: mh
+advanced_by: mh
 assigned_reviewer: pw
 ---
 # **Research Data Analyst Resource Guide**
