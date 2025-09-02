@@ -5,8 +5,6 @@ status: Ready for pw's review
 advanced_by: mh
 assigned_reviewer: pw
 ---
-# **Research Data Analyst Resource Guide**
-
 Welcome to the **Research Data Analyst Resource Guide**. This resource is built to support analysts working with clinical research data—providing technical references, practical examples, and shared standards. It’s here to make day-to-day work more efficient, while offering consistent approaches the whole team can rely on.
 
 ## Scope & Use
