@@ -16,6 +16,17 @@ This view is designed to bifurcate encounters to isolate services that support c
 This is the primary view for encounters and should be used in most cases. 
 The CDWR team has created several derived variables to faciliate research inquiry and querying. Analysts should be familiar with these derived variables and know when to include them in queries and extracts. These derived variables are outlined here, with the complete encounter_v dictionary below.
 
+### Emergency Department (ED) Visits
+
+An **ED visit** refers to a patient’s presentation to the emergency department for unscheduled, acute care.  
+These encounters begin with registration or triage and end with discharge, transfer, admission, or leaving without being seen. While the Research Data Warehouse is designed to optimize querying, it's important to consider Admits thru the ED and ensure whether the study team wants to include them or not.
+
+```sql
+SELECT *
+FROM dbo.Encounters_V enc
+WHERE IsEdVisit = 1
+```
+
 Below are the fields in encounter_v.
 
 
